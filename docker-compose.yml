@@ -1,0 +1,23 @@
+# docker-compose.yml
+
+version: '3'
+
+services:
+  db:
+    image: postgres:9.6
+    environment:
+      POSTGRES_DB: forfar_db
+      POSTGRES_USER: forfar_user
+      POSTGRES_PASSWORD: forfar_password
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+
+  wkhtmltopdf:
+    image: openlabs/docker-wkhtmltopdf-aas
+    ports:
+      - "8080:80"

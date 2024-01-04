@@ -1,0 +1,3 @@
+django-rq
+django
+djangorestframework
